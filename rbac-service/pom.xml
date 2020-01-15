@@ -9,12 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common-starter</artifactId>
-    <description>通用模块</description>
-    <modules>
-        <module>redis-spring-boot-starter</module>
-    </modules>
-    <packaging>pom</packaging>
+    <artifactId>rbac-service</artifactId>
+    <description>系统权限服务</description>
 
 
 </project>

@@ -10,6 +10,7 @@
     <modules>
         <module>cloud-component</module>
         <module>common-starter</module>
+        <module>rbac-service</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -32,6 +33,7 @@
         <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -59,6 +61,13 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- mybatis-plus 依赖 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

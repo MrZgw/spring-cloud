@@ -12,6 +12,8 @@ spring:
       discovery:
         locator:
           enabled: true
+          #服务名小写,默认大写
+          lower-case-service-id: true
 management:
   endpoints:
     web:
@@ -33,4 +35,5 @@ spring:
         namespace: 3093e98d-24f4-42a3-ab35-928b876587e0
   profiles: dev
 #test:
+
 #  value: hello

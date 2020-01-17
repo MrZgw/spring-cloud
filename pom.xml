@@ -33,7 +33,7 @@
         <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
-        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <mybatis-plus.version>3.3.0</mybatis-plus.version>
     </properties>
     <dependencyManagement>
         <dependencies>

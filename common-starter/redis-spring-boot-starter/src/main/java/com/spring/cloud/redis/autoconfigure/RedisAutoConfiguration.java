@@ -28,7 +28,7 @@ public class RedisAutoConfiguration {
      */
     @Bean
     @ConditionalOnMissingBean
-    public RedisRepository redisRepository(RedisTemplate<String, Object> redisTemplate) {
+    public RedisRepository redisRepository(RedisTemplate redisTemplate) {
         return new RedisRepository(redisTemplate);
     }
 }

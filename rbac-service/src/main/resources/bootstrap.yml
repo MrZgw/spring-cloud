@@ -1,19 +1,12 @@
 #服务端口
 server:
-  port: 8080
+  port: 7000
 
 spring:
   application:
-    name: gateway
+    name: rbac-service
   profiles:
     active: dev
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          #服务名小写,默认大写
-          lower-case-service-id: true
 management:
   endpoints:
     web:
@@ -29,11 +22,11 @@ spring:
         server-addr: 192.168.1.165:8848
         file-extension: yml
         namespace: 3093e98d-24f4-42a3-ab35-928b876587e0
+        shared-dataids: base.yml
       discovery:
         # 注册中心地址
         server-addr: 192.168.1.165:8848
         namespace: 3093e98d-24f4-42a3-ab35-928b876587e0
   profiles: dev
 #test:
-
 #  value: hello

@@ -2,8 +2,6 @@ package com.spring.cloud.redis.utils;
 
 import com.spring.cloud.redis.lock.annotation.RedisLock;
 import org.aopalliance.intercept.MethodInvocation;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.context.expression.MethodBasedEvaluationContext;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
@@ -43,18 +41,18 @@ public class LockKeyGenerator {
         return sb.toString();
     }
 
-    public String getKeyName(ProceedingJoinPoint joinPoint, RedisLock redisLock) {
-        StringBuilder sb = new StringBuilder(LOCK_PREFIX);
-        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
-        Method method = methodSignature.getMethod();
-        //类名+方法名
-        sb.append(method.getDeclaringClass().getName()).append(".").append(method.getName());
-        if (redisLock.keys().length > 1 || !"".equals(redisLock.keys()[0])) {
-            sb.append(this.getSpelDefinitionKey(redisLock.keys(), method, joinPoint.getArgs()));
-        }
-
-        return sb.toString();
-    }
+//    public String getKeyName(ProceedingJoinPoint joinPoint, RedisLock redisLock) {
+//        StringBuilder sb = new StringBuilder(LOCK_PREFIX);
+//        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+//        Method method = methodSignature.getMethod();
+//        //类名+方法名
+//        sb.append(method.getDeclaringClass().getName()).append(".").append(method.getName());
+//        if (redisLock.keys().length > 1 || !"".equals(redisLock.keys()[0])) {
+//            sb.append(this.getSpelDefinitionKey(redisLock.keys(), method, joinPoint.getArgs()));
+//        }
+//
+//        return sb.toString();
+//    }
 
     private String getSpelDefinitionKey(String[] definitionKeys, Method method, Object[] parameterValues) {
         EvaluationContext context = new MethodBasedEvaluationContext((Object) null, method, parameterValues, NAME_DISCOVERER);

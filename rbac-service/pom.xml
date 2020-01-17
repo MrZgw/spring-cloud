@@ -12,5 +12,11 @@
     <artifactId>rbac-service</artifactId>
     <description>系统权限服务</description>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.spring.cloud</groupId>
+            <artifactId>redis-spring-boot-starter</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 </project>

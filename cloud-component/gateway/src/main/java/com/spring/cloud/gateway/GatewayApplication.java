@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableDiscoveryClient
 @RestController
-@RefreshScope
 public class GatewayApplication {
 
     public static void main(String[] args) {
@@ -27,8 +25,14 @@ public class GatewayApplication {
     @Value("${test.value}")
     private String testValue;
 
+    @Value("${test.username}")
+    private String testUserName;
+
+    @Value("${test.password}")
+    private String testPassword;
+
     @RequestMapping("/hello")
     public String helloWorld() {
-        return testValue;
+        return testValue + testUserName + testPassword;
     }
 }

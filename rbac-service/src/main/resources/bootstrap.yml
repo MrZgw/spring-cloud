@@ -1,4 +1,4 @@
-#服务端口
+#服务信息
 server:
   port: 7000
 
@@ -15,6 +15,7 @@ management:
 
 ---
 spring:
+  profiles: dev
   cloud:
     nacos:
       config:
@@ -27,6 +28,3 @@ spring:
         # 注册中心地址
         server-addr: 192.168.1.165:8848
         namespace: 3093e98d-24f4-42a3-ab35-928b876587e0
-  profiles: dev
-#test:
-#  value: hello

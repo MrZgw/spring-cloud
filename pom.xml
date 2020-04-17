@@ -31,6 +31,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
+        <spring-boot-admin.version>2.1.5</spring-boot-admin.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
         <mybatis-plus.version>3.3.0</mybatis-plus.version>
@@ -69,6 +70,14 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -76,10 +85,6 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
@@ -111,4 +116,29 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>ALiYun</id>
+            <url>http://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ALiYun</id>
+            <url>http://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 </project>

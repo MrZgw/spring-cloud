@@ -12,11 +12,6 @@ spring:
   profiles: dev
   cloud:
     nacos:
-      # 配置中心地址
-      config:
-        server-addr: 192.168.137.129:8848
-        file-extension: yml
-        namespace: 0b78c516-1a72-4a76-b1d4-4e7fc4481c3a
       # 注册中心
       discovery:
         server-addr: 192.168.137.129:8848

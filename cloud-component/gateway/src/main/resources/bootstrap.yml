@@ -31,7 +31,6 @@ spring:
         namespace: 0b78c516-1a72-4a76-b1d4-4e7fc4481c3a
         shared-dataids: common.yml
         refreshable-dataids: common.yml
-
       discovery:
         # 注册中心地址
         server-addr: 192.168.137.129:8848

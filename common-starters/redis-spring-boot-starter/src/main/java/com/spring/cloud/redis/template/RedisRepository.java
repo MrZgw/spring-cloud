@@ -4,9 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.connection.RedisClusterNode;
 import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.nio.charset.Charset;
 import java.util.List;
@@ -25,11 +23,11 @@ public class RedisRepository {
     /**
      * key序列化实现类
      */
-    private static final RedisSerializer keySerializer = new StringRedisSerializer();
+    private static final RedisSerializer keySerializer = RedisSerializer.string();
     /**
      * value序列化实现类
      */
-    private static final RedisSerializer valueSerializer = new GenericJackson2JsonRedisSerializer();
+    private static final RedisSerializer valueSerializer = RedisSerializer.json();
 
     private RedisTemplate<String, Object> redisTemplate;
 

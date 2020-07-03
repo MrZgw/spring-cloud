@@ -3,21 +3,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>common-starter</artifactId>
+        <artifactId>common-starters</artifactId>
         <groupId>com.spring.cloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>redis-spring-boot-starter</artifactId>
-    <description>redis集成spring-boot通用模块</description>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-
-    </dependencies>
+    <artifactId>log-spring-boot-starter</artifactId>
+    <packaging>jar</packaging>
+    <description>日志通用组件</description>
 
 </project>
